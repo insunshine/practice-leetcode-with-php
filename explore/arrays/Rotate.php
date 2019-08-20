@@ -1,7 +1,7 @@
 <?php
 
 
-namespace src;
+namespace explore\arrays;
 
 
 class Rotate

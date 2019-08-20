@@ -1,7 +1,8 @@
 <?php
 
 
-namespace src;
+namespace explore\arrays;
+
 
 /**
  * 加一

@@ -1,5 +1,8 @@
 <?php
-namespace src;
+
+
+namespace explore\arrays;
+
 
 /**
  * 从排序数组中删除重复项

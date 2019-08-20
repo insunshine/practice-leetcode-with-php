@@ -1,7 +1,8 @@
 <?php
 
 
-namespace src;
+namespace explore\arrays;
+
 
 /**
  * 两个数组的交集 II

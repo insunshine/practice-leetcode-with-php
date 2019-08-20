@@ -1,7 +1,8 @@
 <?php
 
 
-namespace src;
+namespace explore\arrays;
+
 
 /**
  * 买卖股票的最佳时机
