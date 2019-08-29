@@ -16,7 +16,7 @@ class ReverseInt
     {
         $re = 0;
         while ($x) {
-            $tmp = $re * 10 + $x % 10;
+            $tmp = $re * 10 + $x % 10;      //0*10+123%10 = 3   3*10+12%10 = 32     32*10 + 1%10 = 321
             if ((int)($tmp/10) != $re || $tmp > pow(2, 31) || $tmp < (pow(-2, 31) -1) ) {
                 return 0;
             }
