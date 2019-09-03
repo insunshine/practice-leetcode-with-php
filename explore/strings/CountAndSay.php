@@ -64,7 +64,6 @@ class CountAndSay
                     $dd = $a.$p[$s];
                     $q .= $dd;
 
-
                 } elseif(isset($p[$s+1])) {
                     if ($p[$s] == $p[$s+1]) {
                         $num ++;
