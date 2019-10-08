@@ -21,6 +21,9 @@ class RemoveDuplicates
     }
 }
 
+/**
+ * 这是一个测试
+ */
 $re = new RemoveDuplicates();
 $tests = [
     'abbaca',
