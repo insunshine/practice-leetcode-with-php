@@ -10,22 +10,62 @@ namespace problems;
  */
 class NumRookCaptures
 {
-    //TODO
     public function solution($board)
     {
-        $ROOK = [];
+        $col = $row = 0;
         for ($i=0; $i<8; $i++) {
             for ($j=0; $j<8; $j++) {
                 if ($board[$i][$j] == 'R') {
-                    $ROOK = ['row' => $i, 'col' => $j];
+                    $col = $j;
+                    $row = $i;
                 }
             }
         }
 
         $count = 0;
-        for ($i=0; $i<8; $i++) {
 
-            $board[$i][$ROOK['col']];
+        //up
+        for ($i=$row; $i>0; $i--) {
+            if ($board[$i][$col] == 'p') {
+                $count++;
+                break;
+            }
+            if ($board[$i][$col] == 'B') {
+                break;
+            }
+        }
+
+        //down
+        for ($i=$row; $i<8; $i++) {
+            if ($board[$i][$col] == 'p') {
+                $count++;
+                break;
+            }
+            if ($board[$i][$col] == 'B') {
+                break;
+            }
+        }
+
+        //left
+        for ($i=$col; $i>0; $i--) {
+            if ($board[$row][$i] == 'p') {
+                $count++;
+                break;
+            }
+            if ($board[$row][$i] == 'B') {
+                break;
+            }
+        }
+
+        //right
+        for ($i=$col; $i<8; $i++) {
+            if ($board[$row][$i] == 'p') {
+                $count++;
+                break;
+            }
+            if ($board[$row][$i] == 'B') {
+                break;
+            }
         }
 
         return $count;
@@ -44,7 +84,7 @@ $tests = [
         [".",".",".",".",".",".",".","."],
         [".",".",".",".",".",".",".","."]
     ],
-    /*[
+    [
         [".",".",".",".",".",".",".","."],
         [".","p","p","p","p","p",".","."],
         [".","p","p","B","p","p",".","."],
@@ -63,7 +103,7 @@ $tests = [
         [".",".",".","B",".",".",".","."],
         [".",".",".","p",".",".",".","."],
         [".",".",".",".",".",".",".","."]
-    ]*/
+    ]
 ];
 
 foreach ($tests as $test) {
