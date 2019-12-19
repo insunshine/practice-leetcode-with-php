@@ -26,7 +26,7 @@ class ReverseOnlyLetters
             }
         }
 
-        $middle = ceil(count($tmpS) / 2);
+        /*$middle = ceil(count($tmpS) / 2);
         $start = 0;
         $end = count($tmpS)-1;
         while($start < $middle) {
@@ -35,12 +35,19 @@ class ReverseOnlyLetters
             $tmpS[$end] = $tmp;
             $start++;
             $end--;
-        }
+        }*/
+        $tmpS = array_reverse($tmpS);
 
         foreach ($symbols as $key => $symbol) {
             array_splice($tmpS, $key, 0, $symbols[$key]);
         }
         return implode('', $tmpS);
+    }
+
+    //双指针
+    function solution_2($S)
+    {
+
     }
 }
 
